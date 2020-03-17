@@ -9,7 +9,7 @@ namespace EFCoreExample
         static void Main(string[] args)
         {
             CustomerDbContext context = new CustomerDbContext();
-            context.Address.Add(new Address { FullAddress = "123 Kate Lane" });
+            context.Address.Add(new Address { FullAddress = "123 Katerina Lane" });
             context.SaveChanges();
 
             Address myAddress = context.Address.FirstOrDefault(x => x.FullAddress.Contains("Kate"));
